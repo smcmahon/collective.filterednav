@@ -1,0 +1,5 @@
+====================
+collective.filterednav
+====================
+
+User documentation
