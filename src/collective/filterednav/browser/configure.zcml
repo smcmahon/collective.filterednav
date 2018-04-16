@@ -13,7 +13,7 @@
 
   <browser:page
       name="filtered_listing_view"
-      for="plone.dexterity.interfaces.IDexterityContainer"
+      for="*"
       class=".filteredbatch.FilteredBatchView"
       permission="zope2.View"
       allowed_attributes="batch"
