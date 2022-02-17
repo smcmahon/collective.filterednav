@@ -8,6 +8,10 @@ collective.filterednav
 
 This is a trivial package that does one thing: provide folder listings that exclude items marked exclude_from_nav.
 
+This depends on the existence of a field index for exclude_from_nav.
+This does not exist in default Plone and must be added via the portal_catalog tool or equivalent setup.
+If there is no such index, folder listings are unfiltered.
+
 It's currently only meant to work with Plone 5.1.x.
 
 Installation
