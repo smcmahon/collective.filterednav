@@ -6,7 +6,11 @@ class FilteredBatchView(BrowserView):
 
     def batch(self, folder_view, **kwargs):
         kwargs.setdefault('exclude_from_nav', False)
-        results = folder_view.results(**kwargs)
+        try:
+            results = folder_view.results(**kwargs)
+        except TypeError:
+            kwargs.pop('exclude_from_nav')
+            results = folder_view.results(**kwargs)
         batch = Batch(
             results,
             size=folder_view.b_size,
